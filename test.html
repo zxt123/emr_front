@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+</head>
+<body>
+    <div>
+        <button id="btn1">按</button>
+    </div>
+    <textarea id="text1"></textarea>
+<script>
+    $(function () {
+        $('#btn1').click(function () {
+            $.ajax({
+                type:"POST",
+                url:"http://192.168.1.119:8080/ner/visual",
+                data:JSON.stringify({
+                    content : "入院日期:2014-01-03 记录日期:2014年01月03日16时 主诉：吞咽梗阻2月 现病史：患者2月前无明显诱因开始出现进食时哽咽感，以进固体较硬食物时症状明显，不伴返流症状，无烧心，腹痛腹胀，无声嘶，无呛咳，无呕血、黑便。患者于当地医院自行服药治疗，未见好转。1周前患者于成都市第五人民医院门诊行胃镜示食管距门齿36-38cm新生物，活检病理为鳞癌。今为进一步治疗入我科。患者自发病以来精神睡眠食欲尚好，大小便正常，体重无明显改变。既往史：否认肝炎史、疟疾史、结核史，否认高血压史、冠心病史，否认糖尿病史、脑血管病史、精神病史，10+年前因左腿骨折行“骨折复位术”。否认、外伤史、输血史，否认过敏史，预防接种史不详。个人史：生于成都市大邑县，久居本地，无疫水，疫源接触史。否认冶游史。无性病。吸烟30余年，平均20支／日，未戒烟。饮酒30年，以饮用白酒为主，平均10两／日，未戒酒。婚育史：已婚，25岁结婚，配偶健在。育0子1女，健在0子1女，子女体健 家族史：否认家族性遗传病史。 体 格 检 查 T:36.5℃ P:80次/分 R:20次/分 BP:100/70mmHg ECOG:1级 疼痛等级:0级 HR：80次/分",
+                    complete:"true"
+                }),
+                contentType:"application/json",
+                datatype:"json",
+                success:function (data) {
+                    var res = eval(data);
+                    console.log(res.flag);
+                    console.log(res.params)
+                    $('#text1').html(res.errCode)
+
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

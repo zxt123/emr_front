@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>EMR</title>
+
+	<meta name="description" content="overview &amp; stats" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" href="assets/images/icon/iconfont.css">
+	<link rel="stylesheet" href="assets/images/icon/demo.css">
+	<!-- bootstrap & fontawesome -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+	<!-- page specific plugin styles -->
+
+	<!-- text fonts -->
+	<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+	<!-- ace styles -->
+	<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+	<![endif]-->
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+	<![endif]-->
+
+	<!-- inline styles related to this page -->
+
+	<!-- ace settings handler -->
+	<script src="assets/js/ace-extra.min.js"></script>
+
+	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+	<!--[if lte IE 8]>
+	<script src="assets/js/html5shiv.min.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body class="no-skin">
+<div id="navbar" class="navbar navbar-default          ace-save-state">
+	<div class="navbar-container ace-save-state" id="navbar-container">
+		<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+			<span class="sr-only">Toggle sidebar</span>
+
+			<span class="icon-bar"></span>
+
+			<span class="icon-bar"></span>
+
+			<span class="icon-bar"></span>
+		</button>
+
+		<div class="navbar-header pull-left">
+			<a href="index.html" class="navbar-brand">
+				<small>
+					<i class="fa fa-leaf"></i>
+					电子病历管理分析系统
+				</small>
+			</a>
+		</div>
+
+		<div class="navbar-buttons navbar-header pull-right" role="navigation">
+			<ul class="nav ace-nav">
+				<li class="grey dropdown-modal">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-tasks"></i>
+						<span class="badge badge-grey">4</span>
+					</a>
+
+					<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+						<li class="dropdown-header">
+							<i class="ace-icon fa fa-check"></i>
+							4 Tasks to complete
+						</li>
+
+						<li class="dropdown-content">
+							<ul class="dropdown-menu dropdown-navbar">
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Software Update</span>
+											<span class="pull-right">65%</span>
+										</div>
+
+										<div class="progress progress-mini">
+											<div style="width:65%" class="progress-bar"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Hardware Upgrade</span>
+											<span class="pull-right">35%</span>
+										</div>
+
+										<div class="progress progress-mini">
+											<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Unit Testing</span>
+											<span class="pull-right">15%</span>
+										</div>
+
+										<div class="progress progress-mini">
+											<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Bug Fixes</span>
+											<span class="pull-right">90%</span>
+										</div>
+
+										<div class="progress progress-mini progress-striped active">
+											<div style="width:90%" class="progress-bar progress-bar-success"></div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown-footer">
+							<a href="#">
+								See tasks with details
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="purple dropdown-modal">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+						<span class="badge badge-important">8</span>
+					</a>
+
+					<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+						<li class="dropdown-header">
+							<i class="ace-icon fa fa-exclamation-triangle"></i>
+							8 Notifications
+						</li>
+
+						<li class="dropdown-content">
+							<ul class="dropdown-menu dropdown-navbar navbar-pink">
+								<li>
+									<a href="#">
+										<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
+											<span class="pull-right badge badge-info">+12</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="btn btn-xs btn-primary fa fa-user"></i>
+										Bob just signed up as an editor ...
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
+											<span class="pull-right badge badge-info">+11</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown-footer">
+							<a href="#">
+								See all notifications
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="green dropdown-modal">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+						<span class="badge badge-success">5</span>
+					</a>
+
+					<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+						<li class="dropdown-header">
+							<i class="ace-icon fa fa-envelope-o"></i>
+							5 Messages
+						</li>
+
+						<li class="dropdown-content">
+							<ul class="dropdown-menu dropdown-navbar">
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Alex:</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>a moment ago</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Susan:</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>20 minutes ago</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Bob:</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>3:15 pm</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>1:33 pm</span>
+													</span>
+												</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="clearfix">
+										<img src="assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+										<span class="msg-body">
+													<span class="msg-title">
+														<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>10:09 am</span>
+													</span>
+												</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown-footer">
+							<a href="inbox.html">
+								See all messages
+								<i class="ace-icon fa fa-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="light-blue dropdown-modal">
+					<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+						<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+						<span class="user-info">
+									<small>Welcome,</small>
+									zxt
+								</span>
+
+						<i class="ace-icon fa fa-caret-down"></i>
+					</a>
+
+					<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+						<li>
+							<a href="#">
+								<i class="ace-icon fa fa-cog"></i>
+								Settings
+							</a>
+						</li>
+
+						<li>
+							<a href="profile.html">
+								<i class="ace-icon fa fa-user"></i>
+								Profile
+							</a>
+						</li>
+
+						<li class="divider"></li>
+
+						<li>
+							<a href="#">
+								<i class="ace-icon fa fa-power-off"></i>
+								Logout
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div><!-- /.navbar-container -->
+</div>
+
+<div class="main-container ace-save-state" id="main-container">
+	<script type="text/javascript">
+		try{ace.settings.loadState('main-container')}catch(e){}
+	</script>
+
+	<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
+		<script type="text/javascript">
+			try{ace.settings.loadState('sidebar')}catch(e){}
+		</script>
+
+		<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+			<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+				<button class="btn btn-success">
+					<i class="ace-icon fa fa-signal"></i>
+				</button>
+
+				<button class="btn btn-info">
+					<i class="ace-icon fa fa-pencil"></i>
+				</button>
+
+				<button class="btn btn-warning">
+					<i class="ace-icon fa fa-users"></i>
+				</button>
+
+				<button class="btn btn-danger" onclick="window.location.href='/emr/login.html'">
+					<i class="ace-icon fa fa-cogs"></i>
+				</button>
+			</div>
+
+			<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+				<span class="btn btn-success"></span>
+
+				<span class="btn btn-info"></span>
+
+				<span class="btn btn-warning"></span>
+
+				<span class="btn btn-danger"></span>
+			</div>
+		</div><!-- /.sidebar-shortcuts -->
+
+		<ul class="nav nav-list">
+			<li class="">
+				<a href="index.html">
+					<i class="menu-icon fa fa-tachometer"></i>
+					<span class="menu-text"> 主界面 </span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+			<li class="active">
+				<a href="treeview.html" >
+					<i class="menu-icon fa fa-desktop"></i>
+					<span class="menu-text">
+								可视化树形展示
+							</span>
+
+				</a>
+			</li>
+
+			<li class="">
+				<a href="tables.html" >
+					<i class="menu-icon fa fa-list"></i>
+					<span class="menu-text">搜索相似病历</span>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="label.html">
+					<i class="menu-icon fa fa-list-alt"></i>
+					<span class="menu-text"> 病历标注 </span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+			<li class="">
+				<a href="calendar.html">
+					<i class="menu-icon fa fa-calendar"></i>
+
+					<span class="menu-text">
+								日历&提醒事项
+
+							</span>
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+
+
+			<li class="">
+				<a href="#" class="dropdown-toggle">
+					<i class="menu-icon fa fa-tag"></i>
+					<span class="menu-text"> 更多页面 </span>
+
+					<b class="arrow fa fa-angle-down"></b>
+				</a>
+
+				<b class="arrow"></b>
+
+				<ul class="submenu">
+					<li class="">
+						<a href="profile.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							User Profile
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="inbox.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Inbox
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="pricing.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Pricing Tables
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="invoice.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Invoice
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="timeline.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Timeline
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="search.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Search Results
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="email.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Email Templates
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="login.html">
+							<i class="menu-icon fa fa-caret-right"></i>
+							Login &amp; Register
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+				</ul>
+			</li>
+
+
+		</ul><!-- /.nav-list -->
+
+		<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+			<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="main-content-inner">
+			<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+				<ul class="breadcrumb">
+					<li>
+						<i class="ace-icon fa fa-home home-icon"></i>
+						<a href="#">Home</a>
+					</li>
+					<li class="active">主界面</li>
+				</ul><!-- /.breadcrumb -->
+
+				<div class="nav-search" id="nav-search">
+					<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+					</form>
+				</div><!-- /.nav-search -->
+			</div>
+
+			<div class="page-content">
+				<div class="ace-settings-container" id="ace-settings-container">
+					<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+						<i class="ace-icon fa fa-cog bigger-130"></i>
+					</div>
+
+					<div class="ace-settings-box clearfix" id="ace-settings-box">
+						<div class="pull-left width-50">
+							<div class="ace-settings-item">
+								<div class="pull-left">
+									<select id="skin-colorpicker" class="hide">
+										<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+										<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+										<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+										<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+									</select>
+								</div>
+								<span>更换皮肤</span>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
+								<label class="lbl" for="ace-settings-navbar">固定导航栏</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+								<label class="lbl" for="ace-settings-sidebar"> 固定侧边目录</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+								<label class="lbl" for="ace-settings-breadcrumbs"> 固定导航</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
+								<label class="lbl" for="ace-settings-rtl"> 从右到左</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+								<label class="lbl" for="ace-settings-add-container">
+									放置在内部
+								</label>
+							</div>
+						</div><!-- /.pull-left -->
+
+						<div class="pull-left width-50">
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+								<label class="lbl" for="ace-settings-hover"> 悬停跳出子目录</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+								<label class="lbl" for="ace-settings-compact"> 紧凑侧边栏</label>
+							</div>
+
+							<div class="ace-settings-item">
+								<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+								<label class="lbl" for="ace-settings-highlight"> 激活项目</label>
+							</div>
+						</div><!-- /.pull-left -->
+					</div><!-- /.ace-settings-box -->
+				</div><!-- /.ace-settings-container -->
+
+				<div class="page-header">
+					<h1>
+						主界面
+						<small>
+							<i class="ace-icon fa fa-angle-double-right"></i>
+							可视化树形展示
+						</small>
+					</h1>
+				</div>
+				<!--<div class="row">-->
+				<!--<div class="col-lg-6 col-md-6">-->
+				<!--<div class="col-sm-4">-->
+				<!--<input type="file" style="width: 40px;" maxlength="8" id="id-input-file-2" />-->
+				<!--</div>-->
+
+				<!--<div >-->
+				<!--<textarea class="form-control" id="form-field-8" placeholder="自由文本"></textarea>-->
+				<!--</div>-->
+				<!--</div>-->
+				<!--<div class="col-lg-6 col-md-6">-->
+
+				<!--</div>-->
+				<!--</div>-->
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- PAGE CONTENT BEGINS -->
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="widget-box widget-color-blue2">
+									<div class="widget-header">
+										<h4 class="widget-title lighter smaller">选择医学文本</h4>
+									</div>
+
+									<div class="widget-body ">
+										<input type="file" id="id-input-file-2" />
+										<textarea id="content" class="form-control" style="height: 350px" placeholder=""></textarea>
+									</div>
+									<div>
+										<button type="button" class=" pull-right btn btn-sm btn-success" id="change">
+											<span class="bigger-110">转换</span>
+										</button>
+
+										<span class="bigger-110"/>
+										<button type="button" class=" pull-right btn btn-sm btn-warning" id="upload">
+											<span class="bigger-110">上传</span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="widget-box widget-color-green2">
+									<div class="widget-header">
+										<h4 class="widget-title lighter smaller">
+											树形展示结果
+											<!--<span class="smaller-80">(with selectable folders)</span>-->
+										</h4>
+									</div>
+
+									<div class="widget-body">
+										<div class="widget-main padding-8">
+											<ul id="tree2"></ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- PAGE CONTENT ENDS -->
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer-inner">
+			<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">zxt</span>
+							Application &copy; 2018-2019
+						</span>
+
+
+			</div>
+		</div>
+	</div>
+
+	<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+		<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+	</a>
+
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+	if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="assets/js/excanvas.min.js"></script>
+<![endif]-->
+<script src="assets/js/jquery-ui.custom.min.js"></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="assets/js/tree.min.js"></script>
+
+<!-- ace scripts -->
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+	jQuery(function($){
+		$('#id-input-file-2').ace_file_input({
+			no_file:'文件',
+			btn_choose:'选择',
+			btn_change:'更换',
+			droppable:false,
+			onchange:null,
+			thumbnail:false //| true | large
+			//whitelist:'gif|png|jpg|jpeg'
+			//blacklist:'exe|php'
+			//onchange:''
+			//
+		});
+		$('#upload').click(function () {
+			console.log("onselect");
+			var path = $("#id-input-file-2").val();
+			console.log(path);
+			var selectedFile = document.getElementById("id-input-file-2").files[0];
+			console.log(selectedFile); //File(20) {name: "testfile.txt", lastModified: 1531300104720, lastModifiedDate: Wed Jul 11 2018 17:08:24 GMT+0800 (中国标准时间), webkitRelativePath: "", size: 20, …}
+			console.log(selectedFile.src);// undefined
+			console.log(selectedFile.type);// text/plain
+			var name = selectedFile.name;//读取选中文件的文件名
+			var size = selectedFile.size;//读取选中文件的大小
+			console.log("wenjianming:"+name+"daxiao:"+size);//wenjianming:testfile.txtdaxiao:20
+			var reader = new FileReader();//这是核心！！读取操作都是由它完成的
+			reader.readAsText(selectedFile);
+//readAsText(file,[encoding]):将文件读取为文本，encoding缺省为UTF-8   readAsText(selectedFile,'UTF-8')
+			reader.onload = function(oFREvent){//读取完毕从中取值
+				var pointsTxt = oFREvent.target.result;
+				alert(pointsTxt)
+				document.getElementById("content").value = pointsTxt;
+			}
+		});
+		$('#change').click(function () {
+			$.ajax({
+				type:"POST",
+				url:"http://192.168.1.119:8080/ner/visual",
+				data:JSON.stringify({
+					content : document.getElementById("content").value,
+					//入院日期:2014-01-03 记录日期:2014年01月03日16时 主诉：吞咽梗阻2月 现病史：患者2月前无明显诱因开始出现进食时哽咽感，以进固体较硬食物时症状明显，不伴返流症状，无烧心，腹痛腹胀，无声嘶，无呛咳，无呕血、黑便。患者于当地医院自行服药治疗，未见好转。1周前患者于成都市第五人民医院门诊行胃镜示食管距门齿36-38cm新生物，活检病理为鳞癌。今为进一步治疗入我科。患者自发病以来精神睡眠食欲尚好，大小便正常，体重无明显改变。既往史：否认肝炎史、疟疾史、结核史，否认高血压史、冠心病史，否认糖尿病史、脑血管病史、精神病史，10+年前因左腿骨折行“骨折复位术”。否认、外伤史、输血史，否认过敏史，预防接种史不详。个人史：生于成都市大邑县，久居本地，无疫水，疫源接触史。否认冶游史。无性病。吸烟30余年，平均20支／日，未戒烟。饮酒30年，以饮用白酒为主，平均10两／日，未戒酒。婚育史：已婚，25岁结婚，配偶健在。育0子1女，健在0子1女，子女体健 家族史：否认家族性遗传病史。 体 格 检 查 T:36.5℃ P:80次/分 R:20次/分 BP:100/70mmHg ECOG:1级 疼痛等级:0级 HR：80次/分
+					complete:"true"
+				}),
+				contentType:"application/json",
+				datatype:"json",
+				success:function (data) {
+					var res = eval(data);
+					console.log(res.flag);
+					console.log(res.params);
+					var enterDate = res.params[0].enterDate;
+					var recordDate = res.params[0].recordDate;
+					var examination = res.params[0].examination;
+					var chiefComplaint = res.params[0].chiefComplaint;
+					var current = res.params[0].current;
+					var family = res.params[0].family;
+					var general = res.params[0].general;
+					var marriage = res.params[0].marriage;
+					var past = res.params[0].past;
+					var personal = res.params[0].personal;
+					console.log(enterDate);
+					console.log(recordDate);
+					console.log(examination);
+					console.log(chiefComplaint);
+					console.log(current);
+					console.log(family);
+					console.log(general);
+					console.log(marriage);
+					console.log(past);
+					console.log(personal);
+					var sampleData = initiateDemoData();//see below
+
+					$('#tree2').ace_tree({
+						dataSource: sampleData['dataSource2'] ,
+						loadingHTML:'<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>',
+						'open-icon' : 'ace-icon fa fa-folder-open',
+						'close-icon' : 'ace-icon fa fa-folder',
+						'itemSelect' : true,
+						'folderSelect': true,
+						'multiSelect': true,
+						'selected-icon' : null,
+						'unselected-icon' : null,
+						'folder-open-icon' : 'ace-icon tree-plus',
+						'folder-close-icon' : 'ace-icon tree-minus'
+					});
+
+
+					/**
+					 //Use something like this to reload data
+					 $('#tree1').find("li:not([data-template])").remove();
+					 $('#tree1').tree('render');
+					 */
+
+
+					/**
+					 //please refer to docs for more info
+					 $('#tree1')
+					 .on('loaded.fu.tree', function(e) {
+	})
+					 .on('updated.fu.tree', function(e, result) {
+	})
+					 .on('selected.fu.tree', function(e) {
+	})
+					 .on('deselected.fu.tree', function(e) {
+	})
+					 .on('opened.fu.tree', function(e) {
+	})
+					 .on('closed.fu.tree', function(e) {
+	});
+					 */
+
+
+					function initiateDemoData(){
+						var tree_data = {
+							'for-sale' : {text: 'For Sale', type: 'folder'}	,
+							'vehicles' : {text: 'Vehicles', type: 'folder'}	,
+							'rentals' : {text: 'Rentals', type: 'folder'}	,
+							'real-estate' : {text: 'Real Estate', type: 'folder'}	,
+							'pets' : {text: 'Pets', type: 'folder'}	,
+							'tickets' : {text: 'Tickets', type: 'item'}	,
+							'services' : {text: 'Services', type: 'item'}	,
+							'personals' : {text: 'Personals', type: 'item'}
+						}
+						tree_data['for-sale']['additionalParameters'] = {
+							'children' : {
+								'appliances' : {text: 'Appliances', type: 'item'},
+								'arts-crafts' : {text: 'Arts & Crafts', type: 'item'},
+								'clothing' : {text: 'Clothing', type: 'item'},
+								'computers' : {text: 'Computers', type: 'item'},
+								'jewelry' : {text: 'Jewelry', type: 'item'},
+								'office-business' : {text: 'Office & Business', type: 'item'},
+								'sports-fitness' : {text: 'Sports & Fitness', type: 'folder'}
+							}
+						}
+						// tree_data['sports-fitness']['additionalParameters']= {
+						// 	'children' : {
+						// 		'appliance' : {text: 'Appliances', type: 'item'},
+						// 		'arts-craft' : {text: 'Arts & Crafts', type: 'item'},
+						// 		'clothin' : {text: 'Clothing', type: 'item'},
+						// 	}
+						// }
+						tree_data['vehicles']['additionalParameters'] = {
+							'children' : {
+								'cars' : {text: 'Cars', type: 'folder'},
+								'motorcycles' : {text: 'Motorcycles', type: 'item'},
+								'boats' : {text: 'Boats', type: 'item'}
+							}
+						}
+						tree_data['vehicles']['additionalParameters']['children']['cars']['additionalParameters'] = {
+							'children' : {
+								'classics' : {text: 'Classics', type: 'item'},
+								'convertibles' : {text: 'Convertibles', type: 'item'},
+								'coupes' : {text: 'Coupes', type: 'item'},
+								'hatchbacks' : {text: 'Hatchbacks', type: 'item'},
+								'hybrids' : {text: 'Hybrids', type: 'item'},
+								'suvs' : {text: 'SUVs', type: 'item'},
+								'sedans' : {text: 'Sedans', type: 'item'},
+								'trucks' : {text: 'Trucks', type: 'item'}
+							}
+						}
+
+						tree_data['rentals']['additionalParameters'] = {
+							'children' : {
+								'apartments-rentals' : {text: 'Apartments', type: 'item'},
+								'office-space-rentals' : {text: 'Office Space', type: 'item'},
+								'vacation-rentals' : {text: 'Vacation Rentals', type: 'item'}
+							}
+						}
+						tree_data['real-estate']['additionalParameters'] = {
+							'children' : {
+								'apartments' : {text: 'Apartments', type: 'item'},
+								'villas' : {text: 'Villas', type: 'item'},
+								'plots' : {text: 'Plots', type: 'item'}
+							}
+						}
+						tree_data['pets']['additionalParameters'] = {
+							'children' : {
+								'cats' : {text: 'Cats', type: 'item'},
+								'dogs' : {text: 'Dogs', type: 'item'},
+								'horses' : {text: 'Horses', type: 'item'},
+								'reptiles' : {text: 'Reptiles', type: 'item'}
+							}
+						}
+
+						var dataSource1 = function(options, callback){
+							var $data = null
+							if(!("text" in options) && !("type" in options)){
+								$data = tree_data;//the root tree
+								callback({ data: $data });
+								return;
+							}
+							else if("type" in options && options.type == "folder") {
+								if("additionalParameters" in options && "children" in options.additionalParameters)
+									$data = options.additionalParameters.children || {};
+								else $data = {}//no data
+							}
+
+							if($data != null)//this setTimeout is only for mimicking some random delay
+								setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
+
+							//we have used static data here
+							//but you can retrieve your data dynamically from a server using ajax call
+							//checkout examples/treeview.html and examples/treeview.js for more info
+						}
+
+
+
+
+						//
+						var tree_data_2 = {
+							'enter_date' : {text: '入院日期', type: 'folder', 'icon-class':'red'}	,
+							'record_date' : {text: '记录日期', type: 'folder', 'icon-class':'orange'}	,
+							'chief_complaint' : {text: '主诉', type: 'folder', 'icon-class':'pink'}	,
+							'current' : {text: '现病史', type: 'folder', 'icon-class':'blue'}	,
+							'examination' : {text: '体格检查', type: 'folder', 'icon-class':'green'}	,
+							'general' : {text: '一般情况', type: 'folder', 'icon-class':'purple'}	,
+							'past' : {text: '既往史', type: 'folder', 'icon-class':'orange'}	,
+							'personal' : {text: '个人史', type: 'folder', 'icon-class':'pink'}	,
+							'marriage' : {text: '婚育史', type: 'folder', 'icon-class':'blue'}	,
+							'family' : {text: '家族史', type: 'folder', 'icon-class':'green'}
+						};
+						tree_data_2['enter_date']['additionalParameters'] = {
+							'children' : [
+								{text: '<i class="glyphicon glyphicon-time blue"></i>'+ enterDate, type: 'item'}
+							]
+						}
+						tree_data_2['record_date']['additionalParameters'] = {
+							'children' : [
+								{text: '<i class="glyphicon glyphicon-time green"></i>'+ recordDate, type: 'item'}
+							]
+						}
+
+						//体格检查
+						tree_data_2['examination']['additionalParameters'] = {"children":[]};
+						for (var i = 0; i < examination.length; i++) {
+							tree_data_2['examination']['additionalParameters']["children"].push({text: examination[i], type: 'item'});
+						}
+						//现病史
+						tree_data_2['current']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['current']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['current']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<current.length;i++){
+							tree_data_2['current']['additionalParameters']['children'][current[i].type]['additionalParameters']["children"].push({text: current[i].name, type: 'item'});
+						}
+						//主诉
+						tree_data_2['chief_complaint']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['chief_complaint']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<chiefComplaint.length;i++){
+							tree_data_2['chief_complaint']['additionalParameters']['children'][chiefComplaint[i].type]['additionalParameters']["children"].push({text: chiefComplaint[i].name, type: 'item'});
+						}
+						//一般情况
+						tree_data_2['general']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['general']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['general']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<general.length;i++){
+							tree_data_2['general']['additionalParameters']['children'][general[i].type]['additionalParameters']["children"].push({text: general[i].name, type: 'item'});
+						}
+						//既往史
+						tree_data_2['past']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['past']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['past']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<past.length;i++){
+							tree_data_2['past']['additionalParameters']['children'][past[i].type]['additionalParameters']["children"].push({text: past[i].name, type: 'item'});
+						}
+						//个人史
+						tree_data_2['personal']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['personal']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['personal']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<personal.length;i++){
+							tree_data_2['personal']['additionalParameters']['children'][personal[i].type]['additionalParameters']["children"].push({text: personal[i].name, type: 'item'});
+						}
+						//婚育史
+						tree_data_2['marriage']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['marriage']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['marriage']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<marriage.length;i++){
+							tree_data_2['marriage']['additionalParameters']['children'][marriage[i].type]['additionalParameters']["children"].push({text: marriage[i].name, type: 'item'});
+						}
+						//家族史
+						tree_data_2['family']['additionalParameters'] = {
+							'children' : {
+								'S':{text: '自述症状', type: 'folder','icon-class':'red'},
+								'P':{text: '身体部位', type: 'folder','icon-class':'green'},
+								'D':{text: '疾病', type: 'folder','icon-class':'pink'},
+								'E':{text: '检查', type: 'folder','icon-class':'orange'},
+								'T':{text: '治疗', type: 'folder','icon-class':'purple'},
+								'C':{text: '时间', type: 'folder','icon-class':'green'},
+								'A':{text: '异常检查结果', type: 'folder','icon-class':'pink'},
+								'F':{text: '疾病诊断分类', type: 'folder','icon-class':'red'}
+							}
+						};
+						tree_data_2['family']['additionalParameters']['children']['S']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['P']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['D']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['E']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['T']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['C']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['A']['additionalParameters'] = {"children":[]};
+						tree_data_2['family']['additionalParameters']['children']['F']['additionalParameters'] = {"children":[]};
+						for (var i=0;i<family.length;i++){
+							tree_data_2['family']['additionalParameters']['children'][family[i].type]['additionalParameters']["children"].push({text: family[i].name, type: 'item'});
+						}
+
+						var dataSource2 = function(options, callback){
+							var $data = null;
+							if(!("text" in options) && !("type" in options)){
+								$data = tree_data_2;//the root tree
+								callback({ data: $data });
+								return;
+							}
+							else if("type" in options && options.type === "folder") {
+								if("additionalParameters" in options && "children" in options.additionalParameters)
+									$data = options.additionalParameters.children || {};
+								else $data = {}//no data
+							}
+
+							if($data != null)//this setTimeout is only for mimicking some random delay
+								setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
+
+							//we have used static data here
+							//but you can retrieve your data dynamically from a server using ajax call
+							//checkout examples/treeview.html and examples/treeview.js for more info
+						}
+
+
+						return {'dataSource1': dataSource1 , 'dataSource2' : dataSource2}
+					}
+				}
+			})
+		});
+
+
+
+	});
+</script>
+</body>
+</html>
